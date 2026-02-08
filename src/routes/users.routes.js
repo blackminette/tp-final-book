@@ -1,4 +1,24 @@
+/**
+ * @swagger
+ * /users/sign-up:
+ * post:
+ * summary: Inscription
+ * tags: [Users]
+ * responses:
+ * 201:
+ * description: OK
+ */
 
+/**
+ * @swagger
+ * /users/sign-in:
+ * post:
+ * summary: Connexion
+ * tags: [Users]
+ * responses:
+ * 200:
+ * description: OK
+ */
 const express = require("express");
 const router = express.Router();
 const usersController = require("../controllers/users.controller");

@@ -1,3 +1,13 @@
+/**
+ * @swagger
+ * /books:
+ * get:
+ * summary: Liste des livres
+ * tags: [Books]
+ * responses:
+ * 200:
+ * description: OK
+ */
 const express = require("express");
 const router = express.Router();
 const booksController = require("../controllers/books.controller");
@@ -11,3 +21,4 @@ router.get('/:id', booksController.getBookById);
 router.patch('/:id', authenticateMiddleware, validateWithJoi(bookUpdateSchema), booksController.updateBook);
 router.delete('/:id', authenticateMiddleware, booksController.deleteBook);
 module.exports = router;
+
